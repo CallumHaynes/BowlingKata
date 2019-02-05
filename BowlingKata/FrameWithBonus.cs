@@ -14,10 +14,8 @@ namespace BowlingKata
 
         protected int SumNextBalls(int numBalls)
         {
-            var index = _throwList.IndexOf(this) + 1;
-            var count = _throwList.Count - index;
-
-            return _throwList.GetRange(index, count).SelectMany(x => x.Balls).Take(numBalls).Sum();
+            return _throwList.FindAll(x => _throwList.IndexOf(x) > _throwList.IndexOf(this)).SelectMany(x => x.Balls)
+                .Take(numBalls).Sum();
         }
     }
 }
