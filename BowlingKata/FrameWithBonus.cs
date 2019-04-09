@@ -14,7 +14,7 @@ namespace BowlingKata
 
         public int SumNextBalls(int numberOfBalls)
         {
-            return _frameList.FindAll(x => _frameList.IndexOf(x) > _frameList.IndexOf(this)).SelectMany(x => x.ThrowsForTurn).Take(numberOfBalls).Sum();
+            return _frameList.FindAll(x => _frameList.IndexOf(x) > _frameList.IndexOf(this)).SelectMany(x => x.Throws).Take(numberOfBalls).Sum();
         }
     }
 }

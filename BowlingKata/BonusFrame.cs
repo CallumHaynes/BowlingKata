@@ -8,7 +8,7 @@ namespace BowlingKata
 
         public BonusFrame(int throw1)
         {
-            ThrowsForTurn = new List<int> {throw1};
+            Throws = new List<int> {throw1};
         }
     }
 }

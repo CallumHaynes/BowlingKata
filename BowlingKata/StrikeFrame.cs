@@ -8,7 +8,7 @@ namespace BowlingKata
 
         public StrikeFrame(List<Frame> frameList) : base(frameList)
         {
-            ThrowsForTurn = new List<int> { 10 };
+            Throws = new List<int> { 10 };
         }
     }
 }
