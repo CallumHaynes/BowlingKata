@@ -3,13 +3,13 @@ using System.Linq;
 
 namespace BowlingKata
 {
-    public class OpenFrame : Frame
+    class OpenFrame : Frame
     {
-        public override int Score => Balls.Sum();
+        public override int Score => ThrowsForTurn.Sum();
 
-        public OpenFrame(int ball1, int ball2)
+        public OpenFrame(int throw1, int throw2)
         {
-            Balls = new List<int> {ball1, ball2};
+            ThrowsForTurn = new List<int>{throw1, throw2};
         }
     }
 }

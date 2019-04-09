@@ -2,13 +2,13 @@
 
 namespace BowlingKata
 {
-    public class BonusRoll : Frame
+    public class BonusFrame : Frame
     {
         public override int Score => 0;
 
-        public BonusRoll(int ball1)
+        public BonusFrame(int throw1)
         {
-            Balls = new List<int> { ball1 };
+            ThrowsForTurn = new List<int> {throw1};
         }
     }
 }

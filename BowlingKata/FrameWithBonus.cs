@@ -2,20 +2,19 @@
 using System.Linq;
 
 namespace BowlingKata
-{
+{   
     public abstract class FrameWithBonus : Frame
     {
-        private readonly List<Frame> _throwList;
+        private readonly List<Frame> _frameList;
 
-        protected FrameWithBonus(List<Frame> throwList)
+        protected FrameWithBonus(List<Frame> frameList)
         {
-            _throwList = throwList;
+            _frameList = frameList;
         }
 
-        protected int SumNextBalls(int numBalls)
+        public int SumNextBalls(int numberOfBalls)
         {
-            return _throwList.FindAll(x => _throwList.IndexOf(x) > _throwList.IndexOf(this)).SelectMany(x => x.Balls)
-                .Take(numBalls).Sum();
+            return _frameList.FindAll(x => _frameList.IndexOf(x) > _frameList.IndexOf(this)).SelectMany(x => x.ThrowsForTurn).Take(numberOfBalls).Sum();
         }
     }
 }

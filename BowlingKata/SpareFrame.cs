@@ -2,13 +2,13 @@
 
 namespace BowlingKata
 {
-    public class SpareFrame : FrameWithBonus
+    class SpareFrame : FrameWithBonus
     {
         public override int Score => 10 + SumNextBalls(1);
 
-        public SpareFrame(int ball1, int ball2, List<Frame> throwList) :base(throwList)
+        public SpareFrame(int throw1, int throw2, List<Frame> frameList) : base(frameList)
         {
-            Balls = new List<int> { ball1, ball2 };
+            ThrowsForTurn = new List<int>{throw1, throw2};
         }
     }
 }
