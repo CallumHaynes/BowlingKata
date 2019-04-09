@@ -8,7 +8,7 @@ namespace BowlingKata
 
         public SpareFrame(int throw1, int throw2, List<Frame> frameList) : base(frameList)
         {
-            ThrowsForTurn = new List<int>{throw1, throw2};
+            ThrowsForTurn = new List<int> {throw1, throw2};
         }
     }
 }

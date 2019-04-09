@@ -9,7 +9,7 @@ namespace BowlingKata
 
         public OpenFrame(int throw1, int throw2)
         {
-            ThrowsForTurn = new List<int>{throw1, throw2};
+            ThrowsForTurn = new List<int> {throw1, throw2};
         }
     }
 }

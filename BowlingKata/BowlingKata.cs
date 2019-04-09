@@ -40,7 +40,7 @@ namespace BowlingKata
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Bowling Kata!");
         }
     }
 }

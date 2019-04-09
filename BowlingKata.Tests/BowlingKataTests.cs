@@ -78,7 +78,7 @@ namespace BowlingKata.Tests
         [Test]
         public void Perfect()
         {
-            for (int i = 0; i < 10; i++)
+            for (var i = 0; i < 10; i++)
             {
                 _bowlingKata.StrikeFrame();
             }
@@ -90,7 +90,7 @@ namespace BowlingKata.Tests
         [Test]
         public void Alternating()
         {
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
                 _bowlingKata.StrikeFrame();
                 _bowlingKata.SpareFrame(4, 6);
@@ -99,9 +99,9 @@ namespace BowlingKata.Tests
             Assert.AreEqual(200, _bowlingKata.Score());
         }
 
-        private void ManyOpenFrames(int amount, int throw1, int throw2)
+        private void ManyOpenFrames(int amountOfFrames, int throw1, int throw2)
         {
-            for (var i = 0; i < amount; i++)
+            for (var i = 0; i < amountOfFrames; i++)
             {
                 _bowlingKata.OpenFrame(throw1, throw2);
             }
